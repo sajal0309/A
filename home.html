@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('romantic-bg.jpg') no-repeat center center/cover;
+            color: hsl(54, 91%, 49%);
+        }
+        .container {
+            padding: 50px;
+        }
+        .quote {
+            font-size: 24px;
+            margin: 20px auto;
+            max-width: 600px;
+            color: hsl(330, 92%, 50%);
+        }
+        .next-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            color: #f1eded;
+        }
+        .next-button:hover {
+            background: hsl(298, 93%, 48%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Love Story</h1>
+        <p class="quote">"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day."</p>
+        <button class="next-button" onclick="nextPage()">Next</button>
+    </div>
+    
+    <audio id="bg-music" autoplay loop>
+        <source src="1.mp3" type="mp3">
+    </audio>
+    
+    <script>
+        function nextPage() {
+            window.location.href = 'collage.html';
+        }
+    </script>
+</body>
+</html>

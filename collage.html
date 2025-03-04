@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('collage-bg.jpg') no-repeat center center/cover;
+            color: hsl(0, 87%, 51%);
+        }
+        .container {
+            padding: 50px;
+        }
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .collage img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .collage img:hover {
+            transform: scale(1.1);
+        }
+        .next-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            color: white;
+        }
+        .next-button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Beautiful Memories</h1>
+        <p>Every picture tells a story, and every moment is special with you.</p>
+        <div class="collage">
+            <img src="1 P.jpg" alt="Memory 1">
+            <img src="2 P.jpg" alt="Memory 2">
+            <img src="3 P.jpg" alt="Memory 3">
+            <img src="4 P.jpg" alt="Memory 4">
+        </div>
+        <button class="next-button" onclick="nextPage()">Next</button>
+    </div>
+    
+    <script>
+        function nextPage() {
+            window.location.href = 'video.html';
+        }
+    </script>
+</body>
+</html>

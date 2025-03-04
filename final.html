@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Confession</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('final-bg.jpg') no-repeat center center/cover;
+            color: #f10b8a;
+        }
+        .container {
+            padding: 50px;
+        }
+        .confession-text {
+            font-size: 24px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        .yes-btn, .no-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .yes-btn { background: #444; color: white; }
+        .yes-btn:hover { background: #666; }
+        .no-btn { background: #888; position: absolute; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Final Words</h1>
+        <p class="confession-text">I have liked you from the moment we met, and every day since has only made my feelings stronger. You make my world brighter, and I can't imagine it without you.</p>
+        <p class="confession-text">So, I have to ask...</p>
+        <h2 class="confession-text">Will You Be Mine?</h2>
+        <div class="buttons">
+            <button class="yes-btn" onclick="showLove()">Yes</button>
+            <button class="no-btn" id="no-btn" onclick="askAgain()">No</button>
+        </div>
+    </div>
+    
+    <script>
+        function showLove() {
+            document.body.innerHTML = '<h1 style="text-align:center; color: #ff69b4; font-size: 50px;">Yay! ❤️ You just made me the happiest person!</h1>';
+        }
+        
+        function askAgain() {
+            alert("Are you sure? Think again! 😊");
+        }
+        
+        document.getElementById('no-btn').addEventListener('mouseover', function() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
